@@ -3,3 +3,16 @@
 //
 
 #include "UserWorker.h"
+
+UserWorker::UserWorker() : Worker() {
+
+}
+
+UserWorker::~UserWorker() {
+
+}
+
+void UserWorker::run() {
+
+}
+

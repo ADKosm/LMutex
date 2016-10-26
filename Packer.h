@@ -9,7 +9,7 @@
 
 class Packer {
 public:
-    static int mSize;
+    static const int mSize = int(sizeof(Message));
 
     static void toBytes(Message m, char * bytes) {
         union {
@@ -34,6 +34,6 @@ public:
     }
 };
 
-int Packer::mSize = sizeof(Message);
+//int Packer::mSize = sizeof(Message);
 
 #endif //LMUTEX_PACKER_H

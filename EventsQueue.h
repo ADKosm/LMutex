@@ -11,11 +11,13 @@
 #include <condition_variable>
 #include <cstdint>
 
+#include "SafeQueue.h"
+
 #include "Message.h"
 #include "Events.h"
-#include "LMutex.h"
 #include "Handler.h"
-#include "SafeQueue.h"
+
+class LMutex;
 
 class EventsQueue {
 public:

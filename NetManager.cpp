@@ -6,6 +6,7 @@
 #include "Configuration.h"
 #include "Sender.h"
 #include "LMutex.h"
+#include "EventsQueue.h"
 
 #include <thread>
 

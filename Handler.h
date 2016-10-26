@@ -5,8 +5,11 @@
 #ifndef LMUTEX_HANDLER_H
 #define LMUTEX_HANDLER_H
 
-#include "LMutex.h"
 #include "Message.h"
+
+class LMutex;
+class NetManager;
+class Configuration;
 
 class Handler {
 public:

@@ -7,6 +7,12 @@
 #include "MessageBuilder.h"
 #include "Events.h"
 #include "EventsQueue.h"
+#include "UserWorker.h"
+#include "StressWorker.h"
+
+#include "RequestHandler.h"
+#include "ReplyHandler.h"
+#include "ReleaseHandler.h"
 
 LMutex::LMutex() {
     manager = NetManager::Inst();

@@ -2,11 +2,13 @@
 // Created by alex on 25.10.16.
 //
 
+#include "Events.h"
 #include "EventsQueue.h"
 #include "ReleaseHandler.h"
 #include "ReplyHandler.h"
 #include "RequestHandler.h"
 #include "UserLockHandler.h"
+#include "LMutex.h"
 
 EventsQueue::EventsQueue() {
     handlers[Events::Release] = new ReleaseHandler();

@@ -9,15 +9,12 @@
 #include <mutex>
 #include <condition_variable>
 
-#include "Message.h"
-#include "LMutex.h"
-
 template <class T>
 class SafeQueue {
 public:
-    SafeQueue::SafeQueue() {}
+    SafeQueue() {}
 
-    SafeQueue::~SafeQueue() {}
+    ~SafeQueue() {}
 
     void push(const T &message) {
         std::unique_lock<std::mutex> ulock(mutex);

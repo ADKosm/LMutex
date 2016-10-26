@@ -3,6 +3,7 @@
 //
 
 #include "UserLockHandler.h"
+#include "LMutex.h"
 
 UserLockHandler::UserLockHandler() : Handler() {
 

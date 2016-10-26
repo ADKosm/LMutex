@@ -24,12 +24,14 @@ public:
     std::map<uint32_t, Node> & Nodes();
     std::string Type();
     std::string Path();
+    std::string LogDir();
 
     Worker * getWorker();
 
+    ~Configuration();
+
 private:
     Configuration();
-    ~Configuration();
 
     static Configuration * self;
 
@@ -37,7 +39,8 @@ private:
     std::map< std::uint32_t , Node> nodes;
     std::string type;
     std::string path;
+    std::string logDir;
 };
 
-Configuration * Configuration::self = nullptr;
+//Configuration * Configuration::self = nullptr;
 #endif //LMUTEX_CONFIGURATION_H

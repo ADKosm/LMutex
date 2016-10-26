@@ -3,6 +3,9 @@
 //
 
 #include "Handler.h"
+#include "LMutex.h"
+#include "NetManager.h"
+#include "Configuration.h"
 
 Handler::Handler() {
     manager = NetManager::Inst();

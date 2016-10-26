@@ -15,9 +15,4 @@ public:
     static std::uint8_t UserLock;
 };
 
-std::uint8_t Events::Reply = 0;
-std::uint8_t Events::Release = 1;
-std::uint8_t Events::Request = 2;
-std::uint8_t Events::UserLock = 3;
-
 #endif //LMUTEX_EVENTS_H

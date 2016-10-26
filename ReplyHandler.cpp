@@ -7,6 +7,7 @@
 #include "Configuration.h"
 #include "MessageBuilder.h"
 #include "Events.h"
+#include "LMutex.h"
 
 
 ReplyHandler::ReplyHandler() : Handler() {
@@ -17,5 +18,5 @@ ReplyHandler::~ReplyHandler() {
 
 void ReplyHandler::handle(Message message, LMutex *mutex) {
     mutex->replies.insert(message);
-    mutex->tick();
+    mutex->time = std::max(mutex->time, message.time) + 1;
 }

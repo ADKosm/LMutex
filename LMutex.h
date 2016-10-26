@@ -10,11 +10,16 @@
 #include <vector>
 #include <set>
 
-#include "RequestHandler.h"
-#include "ReplyHandler.h"
-#include "ReleaseHandler.h"
 #include "NetManager.h"
 #include "Configuration.h"
+#include "Message.h"
+
+class StressWorker;
+class UserWorker;
+
+class RequestHandler;
+class ReplyHandler;
+class ReleaseHandler;
 
 class qComparator {
 public:
@@ -43,6 +48,8 @@ class LMutex {
     friend class RequestHandler;
     friend class ReplyHandler;
     friend class ReleaseHandler;
+    friend class StressWorker;
+    friend class UserWorker;
 public:
     LMutex();
     ~LMutex();

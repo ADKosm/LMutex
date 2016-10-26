@@ -10,6 +10,7 @@
 #include "Message.h"
 #include "Node.h"
 #include "Configuration.h"
+#include "Logger.h"
 
 class NetManager;
 
@@ -27,6 +28,7 @@ private:
 
     NetManager * manager;
     Configuration * configuration;
+    Logger * logger;
 };
 
 

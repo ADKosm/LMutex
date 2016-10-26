@@ -6,12 +6,13 @@
 #define LMUTEX_NETMANAGER_H
 
 #include "Listener.h"
-#include "EventsQueue.h"
 #include "SafeQueue.h"
+#include "EventsQueue.h"
 
 #include <cstdint>
 
 class Sender;
+class EventQueue;
 
 class NetManager {
     friend class Sender;
@@ -30,9 +31,10 @@ public:
     void sendTo(std::uint32_t id, Message message, LMutex *mutex);
     void sendToAll(Message message, LMutex *mutex);
 
+    ~NetManager();
 private:
     NetManager();
-    ~NetManager();
+
 
     static NetManager * self;
 
@@ -47,8 +49,6 @@ private:
 
     SafeQueue< std::pair<std::uint32_t , Message> >messagesToSend;
 };
-
-NetManager * NetManager::self = nullptr;
 
 
 #endif //LMUTEX_NETMANAGER_H

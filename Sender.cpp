@@ -23,6 +23,7 @@
 Sender::Sender() {
     manager = NetManager::Inst();
     configuration = Configuration::Inst();
+    logger = Logger::Inst();
 }
 
 Sender::~Sender() {
@@ -31,6 +32,7 @@ Sender::~Sender() {
 void Sender::run() {
     for(;;) {
         auto currentMessage = manager->messagesToSend.pop();
+        logger->log(currentMessage.second);
         sendTo(currentMessage.first, currentMessage.second);
     }
 }
@@ -54,7 +56,8 @@ void Sender::sendTo(std::uint32_t id, Message message) {
     int status;
     do {
         status = connect(sendfd, (struct sockaddr*) &servaddr, sizeof(servaddr));
-    } while(status == -1);
+        if(status == -1) std::this_thread::sleep_for(std::chrono::milliseconds(5));
+    } while(status == -1); // we expect, that we don't have problems with network connection therefore we don't set timeout
 
     char data[Packer::mSize];
     Packer::toBytes(message, data);

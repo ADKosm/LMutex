@@ -6,6 +6,7 @@
 #include "MessageBuilder.h"
 #include "Events.h"
 #include "Configuration.h"
+#include "LMutex.h"
 
 RequestHandler::RequestHandler() : Handler() {
 }
@@ -23,6 +24,6 @@ void RequestHandler::handle(Message message, LMutex *mutex) {
             .time(mutex->time)
             .build();
 
-    manager->sendToAll(reply, mutex);
+    manager->sendTo(message.id, reply, mutex);
 }
 

@@ -9,6 +9,12 @@
 
 class UserWorker : public Worker {
 
+public:
+    UserWorker();
+
+    virtual ~UserWorker() override;
+
+    virtual void run() override;
 };
 
 

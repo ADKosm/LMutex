@@ -6,6 +6,7 @@
 #define LMUTEX_STRESSWORKER_H
 
 #include "Worker.h"
+class LMutex;
 
 class StressWorker : public Worker {
 
@@ -15,7 +16,7 @@ public:
 
     virtual void run() override;
 
-    void write();
+    void writeToFile(LMutex &mutex);
 
 private:
     int number;
