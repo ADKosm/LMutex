@@ -24,22 +24,25 @@ StressWorker::~StressWorker() {
 }
 
 void StressWorker::run() {
+    std::cout << "Begin running" << std::endl;
     LMutex mutex;
+    std::cout << "Create Mutex" << std::endl;
     std::this_thread::sleep_for(std::chrono::milliseconds(500));
     for(int i = 0; i < number; i++) {
         mutex.lock();
         writeToFile(mutex);
         mutex.unlock();
     }
+    mutex.finish();
 }
 
 
 void StressWorker::writeToFile(LMutex &mutex) {
     std::stringstream stringBuilder;
     stringBuilder
-            << "Id: " << Configuration::Inst()->Id()
-            << "PID: " << getpid()
-            << "Lock: " << mutex.time;
+            << "Id: " << Configuration::Inst()->Id() << ' '
+            << "PID: " << getpid() << ' '
+            << "Lock: " << mutex.time << ' ';
 
     mutex.tick();
 
@@ -49,7 +52,9 @@ void StressWorker::writeToFile(LMutex &mutex) {
     std::getline(stringBuilder, result);
     result+='\n';
 
-    int fd = open(Configuration::Inst()->Path().c_str(), O_WRONLY, O_APPEND);
+    std::cout << result << std::endl;
+
+    int fd = open(Configuration::Inst()->Path().c_str(), O_WRONLY | O_APPEND);
     int stat = flock(fd, LOCK_EX | LOCK_NB);
     if(stat == -1) throw std::string("Flock error");
     write(fd, result.c_str(), result.size());

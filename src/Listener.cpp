@@ -21,6 +21,7 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/time.h>
+#include <iostream>
 
 Listener::Listener() {
     manager = NetManager::Inst();
@@ -51,21 +52,25 @@ void Listener::run() {
     listen(listenfd, LISTENQ);
 
     for(;;) {
-        std::this_thread::sleep_for(std::chrono::seconds(10)); // TODO: remove this line
+//        std::this_thread::sleep_for(std::chrono::seconds(10)); // TODO: remove this line
         connfd = accept(listenfd, (SA*)&ip_name, &len);
+
+        std::cout << "Receiving some message" << std::endl;
 
         char rawData[Packer::mSize];
 
         int read_bytes = 0;
         while( read_bytes < Packer::mSize ) {
-           read_bytes += recv(connfd, rawData + read_bytes, Packer::mSize - read_bytes, 0);
+           read_bytes += read(connfd, rawData + read_bytes, Packer::mSize - read_bytes);
         }
 
         Message readMessage = Packer::toMessage(rawData);
 
+        std::cout << "This message from " << readMessage.id << ": " << readMessage.time << ' ' << int(readMessage.type) << std::endl;
+
         manager->NetEvents()->push(readMessage);
 
-        shutdown(connfd, SHUT_RDWR);
+//        shutdown(connfd, SHUT_RDWR);
         close(connfd);
     }
 }

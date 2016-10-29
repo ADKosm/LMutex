@@ -18,7 +18,7 @@ class NetManager {
     friend class Sender;
 public:
     static NetManager * Inst() {
-        if(!self) self = new NetManager();
+        if(self == nullptr) self = new NetManager();
         return self;
     }
 

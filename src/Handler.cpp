@@ -13,7 +13,5 @@ Handler::Handler() {
 }
 
 Handler::~Handler() {
-    delete manager;
-    delete configuration;
 }
 

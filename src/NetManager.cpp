@@ -21,14 +21,16 @@ void NetManager::run() {
 }
 
 void NetManager::init() {
-}
-
-NetManager::NetManager() {
+    netEvents = new EventsQueue();
     listener = new Listener();
     sender = new Sender();
 }
 
+NetManager::NetManager() {
+}
+
 NetManager::~NetManager() {
+    delete netEvents;
     delete listener;
     delete sender;
 }
@@ -49,7 +51,7 @@ void NetManager::sendTo(std::uint32_t id, Message message, LMutex *mutex) {
 void NetManager::sendToAll(Message message, LMutex *mutex) {
     auto& nodes = Configuration::Inst()->Nodes();
     for(auto e : nodes) {
-        sendTo(e.first, message, mutex);
+        if(e.first != Configuration::Inst()->Id())sendTo(e.first, message, mutex);
     }
 }
 

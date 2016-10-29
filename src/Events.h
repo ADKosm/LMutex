@@ -13,6 +13,8 @@ public:
     static std::uint8_t Release;
     static std::uint8_t Request;
     static std::uint8_t UserLock;
+    static std::uint8_t Terminate;
+    static std::uint8_t TerminateReply;
 };
 
 #endif //LMUTEX_EVENTS_H

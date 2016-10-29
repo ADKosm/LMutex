@@ -6,13 +6,14 @@
 #include "UserWorker.h"
 #include "StressWorker.h"
 
-// [type of work] [path to file] [log directory] [number of nodes] [current id] { [id] [address] [port] [id] [address] [port] ... }
+// [current id] [type of work] [path to file] [log directory] [number of nodes] { [id] [address] [port] [id] [address] [port] ... }
 void Configuration::init(int argv, char **argc) {
-    std::string currentType = std::string(argc[1]);
-    std::string pathToFile = std::string(argc[2]);
-    std::string log = std::string(argc[3]);
-    int numberOfNodes = std::stoi(std::string(argc[4]));
-    int currentId = std::stoi(std::string(argc[5]));
+
+    int currentId = std::stoi(std::string(argc[1]));
+    std::string currentType = std::string(argc[2]);
+    std::string pathToFile = std::string(argc[3]);
+    std::string log = std::string(argc[4]);
+    int numberOfNodes = std::stoi(std::string(argc[5]));
 
     id = static_cast<std::uint32_t >(currentId);
     type = currentType;

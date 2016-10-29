@@ -14,7 +14,7 @@
 class Configuration {
 public:
     static Configuration * Inst() {
-        if(!self) self = new Configuration();
+        if(self == nullptr) self = new Configuration();
         return self;
     }
 

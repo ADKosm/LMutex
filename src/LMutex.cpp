@@ -1,6 +1,7 @@
 //
 // Created by alex on 25.10.16.
 //
+#include <iostream>
 
 #include "LMutex.h"
 #include "Message.h"
@@ -32,7 +33,7 @@ void LMutex::lock() {
             .build();
     queue.push(requestToLock);
 
-    manager->sendToAll(requestToLock, nullptr);
+    manager->sendToAll(requestToLock, this);
 
     while (!isAllNodesReplyed()) {
         manager->NetEvents()->handle(this);
@@ -58,13 +59,42 @@ void LMutex::unlock() {
 
 
 bool LMutex::isAllNodesReplyed() {
-    return configuration->Nodes().size() == replies.size();
+    return (configuration->Nodes().size() - 1) == replies.size();
 }
 
 bool LMutex::meOnTop() {
     return queue.top().id == configuration->Id();
 }
 
+bool LMutex::isAllNodesTerminated() {
+    return (configuration->Nodes().size()) == terminated.size();
+}
+
 void LMutex::tick() {
+//    std::cout << time << std::endl;
     time++;
+}
+
+bool LMutex::isAllNodesReplyOnTerminate() {
+    return (configuration->Nodes().size()-1) == terminatedReplies.size();
+}
+
+void LMutex::finish() {
+    Message terminatedMessage = MessageBuilder()
+            .time(this->time)
+            .type(Events::Terminate)
+            .id(configuration->Id())
+            .build();
+
+    terminated.insert(terminatedMessage);
+    manager->sendToAll(terminatedMessage, this);
+
+    while(!isAllNodesReplyOnTerminate()) {
+        manager->NetEvents()->handle(this);
+    }
+
+    while(!isAllNodesTerminated()) {
+        manager->NetEvents()->handle(this);
+    }
+    std::cout << "End my("<< configuration->Id() <<") work" << std::endl;
 }

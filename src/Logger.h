@@ -13,7 +13,7 @@
 class Logger {
 public:
     static Logger * Inst() {
-        if(!self) self = new Logger();
+        if(self == nullptr) self = new Logger();
         return self;
     }
 

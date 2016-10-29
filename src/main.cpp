@@ -6,7 +6,7 @@
 
 /*
  * using:
- * node [type of work] [path to file] [log directory] [number of nodes] [current id] { [id] [address] [port] [id] [address] [port] ... }
+ * node [current id] [type of work] [path to file] [log directory] [number of nodes]  { [id] [address] [port] [id] [address] [port] ... }
  * [type of work] is in { 'stress', 'user' }
  * end of log directory must be '/'
  * */

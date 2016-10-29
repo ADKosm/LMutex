@@ -8,6 +8,8 @@
 #include "ReplyHandler.h"
 #include "RequestHandler.h"
 #include "UserLockHandler.h"
+#include "TerminateHandler.h"
+#include "TerminateReplyHandler.h"
 #include "LMutex.h"
 
 EventsQueue::EventsQueue() {
@@ -15,6 +17,8 @@ EventsQueue::EventsQueue() {
     handlers[Events::Reply] = new ReplyHandler();
     handlers[Events::Request] = new RequestHandler();
     handlers[Events::UserLock] = new UserLockHandler();
+    handlers[Events::Terminate] = new TerminateHandler();
+    handlers[Events::TerminateReply] = new TerminateReplyHandler();
 }
 
 EventsQueue::~EventsQueue() {

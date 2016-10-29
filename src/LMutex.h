@@ -20,6 +20,8 @@ class UserWorker;
 class RequestHandler;
 class ReplyHandler;
 class ReleaseHandler;
+class TerminateHandler;
+class TerminateReplyHandler;
 
 class qComparator {
 public:
@@ -28,9 +30,9 @@ public:
 
     bool operator() (const Message& a, const Message& b) const {
         if(a.time == b.time) {
-            return a.id < b.id;
+            return a.id > b.id;
         }
-        return a.time < b.time;
+        return a.time > b.time;
     }
 };
 
@@ -48,6 +50,8 @@ class LMutex {
     friend class RequestHandler;
     friend class ReplyHandler;
     friend class ReleaseHandler;
+    friend class TerminateHandler;
+    friend class TerminateReplyHandler;
     friend class StressWorker;
     friend class UserWorker;
 public:
@@ -57,17 +61,25 @@ public:
     void lock();
     void unlock();
 
+    void finish();
+
     void tick();
 
 private:
     std::uint64_t time;
     std::priority_queue<Message, std::vector<Message>, qComparator > queue;
     std::set<Message, replyComparator> replies;
+
+    std::set<Message, replyComparator> terminated;
+    std::set<Message, replyComparator> terminatedReplies;
+
     NetManager * manager;
     Configuration * configuration;
 
     bool meOnTop();
     bool isAllNodesReplyed();
+    bool isAllNodesTerminated();
+    bool isAllNodesReplyOnTerminate();
 };
 
 
