@@ -31,6 +31,8 @@ public:
     void sendTo(std::uint32_t id, Message message, LMutex *mutex);
     void sendToAll(Message message, LMutex *mutex);
 
+    void finishNetwork();
+
     ~NetManager();
 private:
     NetManager();

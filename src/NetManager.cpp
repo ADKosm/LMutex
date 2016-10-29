@@ -7,6 +7,7 @@
 #include "Sender.h"
 #include "LMutex.h"
 #include "EventsQueue.h"
+#include "MessageBuilder.h"
 
 #include <thread>
 
@@ -53,5 +54,12 @@ void NetManager::sendToAll(Message message, LMutex *mutex) {
     for(auto e : nodes) {
         if(e.first != Configuration::Inst()->Id())sendTo(e.first, message, mutex);
     }
+}
+
+
+void NetManager::finishNetwork() {
+    messagesToSend.push(std::make_pair(0,
+        MessageBuilder().id(0).time(0).type(Events::FinishNetwork).build()
+    ));
 }
 

@@ -9,6 +9,8 @@
 
 class Events {
 public:
+    static std::uint8_t FinishNetwork;
+    static std::uint8_t FinishSender;
     static std::uint8_t Reply;
     static std::uint8_t Release;
     static std::uint8_t Request;

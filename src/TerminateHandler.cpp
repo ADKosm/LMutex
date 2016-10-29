@@ -14,7 +14,7 @@ TerminateHandler::~TerminateHandler() {
 }
 
 void TerminateHandler::handle(Message message, LMutex *mutex) {
-    std::cout << "Receive TERMINATED message" << std::endl;
+    std::cout << "Receive TERMINATED message from " << message.id << std::endl;
     mutex->terminated.insert(message);
     mutex->time = std::max(mutex->time, message.time) + 1;
 

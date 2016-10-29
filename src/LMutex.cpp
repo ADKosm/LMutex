@@ -20,6 +20,7 @@ LMutex::LMutex() {
     configuration = Configuration::Inst();
 
     time = 0;
+    isSenderFinish = false;
 }
 
 LMutex::~LMutex() {
@@ -67,7 +68,7 @@ bool LMutex::meOnTop() {
 }
 
 bool LMutex::isAllNodesTerminated() {
-    return (configuration->Nodes().size()) == terminated.size();
+    return (configuration->Nodes().size()-1) == terminated.size();
 }
 
 void LMutex::tick() {
@@ -86,15 +87,26 @@ void LMutex::finish() {
             .id(configuration->Id())
             .build();
 
-    terminated.insert(terminatedMessage);
     manager->sendToAll(terminatedMessage, this);
 
     while(!isAllNodesReplyOnTerminate()) {
         manager->NetEvents()->handle(this);
     }
 
+    std::cout << "Term size: " << terminatedReplies.size() << std::endl;
+
     while(!isAllNodesTerminated()) {
         manager->NetEvents()->handle(this);
     }
+
+    manager->finishNetwork();
+
+
+
+    while(!isSenderFinish) {
+        manager->NetEvents()->handle(this);
+    }
+
+    std::cout << "Nodes size: " << terminated.size() << std::endl;
     std::cout << "End my("<< configuration->Id() <<") work" << std::endl;
 }

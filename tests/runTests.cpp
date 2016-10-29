@@ -21,5 +21,15 @@ int main() {
         q.pop();
         std::cout << a.id << ' ' << a.time << std::endl;
     }
+
+    std::queue<Message> s;
+    s.push(MessageBuilder().time(4).id(5).type(6).build());
+    s.push(MessageBuilder().time(1).id(2).type(3).build());
+
+    while(!s.empty()) {
+        Message a = s.front();
+        s.pop();
+        std::cout << a.id << ' ' << a.time << std::endl;
+    }
     return 0;
 }

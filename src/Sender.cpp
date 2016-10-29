@@ -8,6 +8,7 @@
 #include "Configuration.h"
 #include "Node.h"
 #include "Packer.h"
+#include "MessageBuilder.h"
 
 #include <thread>
 
@@ -33,8 +34,15 @@ Sender::~Sender() {
 void Sender::run() {
     for(;;) {
         auto currentMessage = manager->messagesToSend.pop();
-        logger->log(currentMessage.second);
-        sendTo(currentMessage.first, currentMessage.second);
+        if(currentMessage.second.type == Events::FinishNetwork) {
+            manager->NetEvents()->push(
+                    MessageBuilder().id(0).time(0).type(Events::FinishSender).build()
+            );
+            break;
+        } else {
+            logger->log(currentMessage.second);
+            sendTo(currentMessage.first, currentMessage.second);
+        }
     }
 }
 
