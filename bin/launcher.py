@@ -4,7 +4,7 @@ import sys, os, shutil
 # [type] [number]
 type = sys.argv[1]
 number = int(sys.argv[2])
-ports = int(sys.argv[3])
+ports = 8
 
 open('mutex.txt', 'tw+').close()
 
