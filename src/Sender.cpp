@@ -31,28 +31,11 @@ Sender::Sender() {
 Sender::~Sender() {
 }
 
-void Sender::run() {
-    for(;;) {
-        auto currentMessage = manager->messagesToSend.pop();
-        if(currentMessage.second.type == Events::FinishNetwork) {
-            manager->NetEvents()->push(
-                    MessageBuilder().id(0).time(0).type(Events::FinishSender).build()
-            );
-            break;
-        } else {
-            logger->log(currentMessage.second);
-            sendTo(currentMessage.first, currentMessage.second);
-        }
-    }
-}
-
 void Sender::sendTo(std::uint32_t id, Message message) {
-
-    std::cout << "Send message from " << configuration->Id() <<" to " << id << ": " << message.time << ' ' << int(message.type) << std::endl;
     auto& nodes = configuration->Nodes();
 
-    int sendfd, connfd;
-    int port = nodes[id].port;//currentNode.port;
+    int sendfd;
+    int port = nodes[id].port;
     std::string address = nodes[id].adress;
     struct sockaddr_in servaddr;
 
@@ -61,7 +44,7 @@ void Sender::sendTo(std::uint32_t id, Message message) {
     bzero(&servaddr, sizeof(servaddr));
     servaddr.sin_family = AF_INET;
     servaddr.sin_port = htons(port);
-    int res = inet_pton(AF_INET, "0.0.0.0"/*address.c_str()*/, &servaddr.sin_addr);
+    inet_pton(AF_INET, address.c_str(), &servaddr.sin_addr);
 
     int status;
     do {
@@ -77,6 +60,5 @@ void Sender::sendTo(std::uint32_t id, Message message) {
         bytes_sent += write(sendfd, data + bytes_sent, Packer::mSize - bytes_sent);
     }
 
-//    shutdown(sendfd, SHUT_RDWR);
     close(sendfd);
 }

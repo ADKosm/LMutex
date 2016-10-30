@@ -14,6 +14,7 @@
 #include "RequestHandler.h"
 #include "ReplyHandler.h"
 #include "ReleaseHandler.h"
+#include "Logger.h"
 
 #include <thread>
 
@@ -22,10 +23,10 @@ LMutex::LMutex() {
     configuration = Configuration::Inst();
 
     time = 0;
-    isSenderFinish = false;
 }
 
 LMutex::~LMutex() {
+    finish();
 }
 
 void LMutex::lock() {
@@ -58,8 +59,6 @@ void LMutex::unlock() {
             .build();
 
     manager->sendToAll(requestToRelease, this);
-
-//    std::this_thread::sleep_for(std::chrono::seconds(3));
 }
 
 
@@ -76,7 +75,6 @@ bool LMutex::isAllNodesTerminated() {
 }
 
 void LMutex::tick() {
-//    std::cout << time << std::endl;
     time++;
 }
 
@@ -97,20 +95,7 @@ void LMutex::finish() {
         manager->NetEvents()->handle(this);
     }
 
-    std::cout << "Term size: " << terminatedReplies.size() << std::endl;
-
     while(!isAllNodesTerminated()) {
         manager->NetEvents()->handle(this);
     }
-
-//    manager->finishNetwork();
-//
-//
-//
-//    while(!isSenderFinish) {
-//        manager->NetEvents()->handle(this);
-//    }
-
-    std::cout << "Nodes size: " << terminated.size() << std::endl;
-    std::cout << "End my("<< configuration->Id() <<") work" << std::endl;
 }

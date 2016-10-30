@@ -31,25 +31,17 @@ public:
     void sendTo(std::uint32_t id, Message message, LMutex *mutex);
     void sendToAll(Message message, LMutex *mutex);
 
-    void finishNetwork();
-
     ~NetManager();
 private:
     NetManager();
 
-
     static NetManager * self;
-
-    int argv;
-    char ** argc;
 
     Listener * listener;
     Sender * sender;
 
     EventsQueue * netEvents;
     EventsQueue * userEvents;
-
-    SafeQueue< std::pair<std::uint32_t , Message> >messagesToSend;
 };
 
 

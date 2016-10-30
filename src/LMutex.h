@@ -23,7 +23,6 @@ class ReplyHandler;
 class ReleaseHandler;
 class TerminateHandler;
 class TerminateReplyHandler;
-class SenderFinishHandler;
 
 class qComparator {
 public:
@@ -44,7 +43,6 @@ class LMutex {
     friend class ReleaseHandler;
     friend class TerminateHandler;
     friend class TerminateReplyHandler;
-    friend class SenderFinishHandler;
 
     friend class StressWorker;
     friend class UserWorker;
@@ -69,8 +67,6 @@ private:
 
     NetManager * manager;
     Configuration * configuration;
-
-    bool isSenderFinish;
 
     bool meOnTop();
     bool isAllNodesReplyed();

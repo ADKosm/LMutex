@@ -4,6 +4,8 @@
 
 #include "StressWorker.h"
 #include "LMutex.h"
+#include "Logger.h"
+#include "MessageBuilder.h"
 #include <iostream>
 #include <thread>
 #include <sstream>
@@ -17,23 +19,19 @@
 
 
 StressWorker::StressWorker() :
-        number(5)
+        number(10000)
 {}
 
 StressWorker::~StressWorker() {
 }
 
 void StressWorker::run() {
-    std::cout << "Begin running" << std::endl;
     LMutex mutex;
-    std::cout << "Create Mutex" << std::endl;
-    std::this_thread::sleep_for(std::chrono::milliseconds(500));
     for(int i = 0; i < number; i++) {
         mutex.lock();
         writeToFile(mutex);
         mutex.unlock();
     }
-    mutex.finish();
 }
 
 
@@ -46,13 +44,19 @@ void StressWorker::writeToFile(LMutex &mutex) {
 
     mutex.tick();
 
+    Logger::Inst()->log(MessageBuilder()
+            .id(Configuration::Inst()->Id())
+            .time(mutex.time)
+            .type(Events::Acquire)
+            .build());
+
+    mutex.tick();
+
     stringBuilder << "Unlock: " << mutex.time;
 
     std::string result;
     std::getline(stringBuilder, result);
     result+='\n';
-
-    std::cout << result << std::endl;
 
     int fd = open(Configuration::Inst()->Path().c_str(), O_WRONLY | O_APPEND);
     int stat = flock(fd, LOCK_EX | LOCK_NB);

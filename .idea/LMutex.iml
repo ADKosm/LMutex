@@ -5,10 +5,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/ReleaseHandler.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/RequestHandler.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Packer.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/SenderFinishHandler.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/UserLockHandler.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/UserWorker.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/MessageBuilder.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/SenderFinishHandler.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Events.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/NetManager.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/RequestHandler.h" isTestSource="false" />
@@ -16,7 +15,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/UserWorker.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/TerminateReplyHandler.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/EventsQueue.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/UserLockHandler.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/EventsQueue.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Sender.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/StressWorker.cpp" isTestSource="false" />

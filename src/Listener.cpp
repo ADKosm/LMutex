@@ -52,10 +52,7 @@ void Listener::run() {
     listen(listenfd, LISTENQ);
 
     for(;;) {
-//        std::this_thread::sleep_for(std::chrono::seconds(10)); // TODO: remove this line
         connfd = accept(listenfd, (SA*)&ip_name, &len);
-
-//        std::cout << "Receiving some message" << std::endl;
 
         char rawData[Packer::mSize];
 
@@ -66,11 +63,8 @@ void Listener::run() {
 
         Message readMessage = Packer::toMessage(rawData);
 
-//        std::cout << "This message from " << readMessage.id << ": " << readMessage.time << ' ' << int(readMessage.type) << std::endl;
-
         manager->NetEvents()->push(readMessage);
 
-//        shutdown(connfd, SHUT_RDWR);
         close(connfd);
     }
 }

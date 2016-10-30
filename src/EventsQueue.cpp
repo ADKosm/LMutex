@@ -11,7 +11,6 @@
 #include "TerminateHandler.h"
 #include "TerminateReplyHandler.h"
 #include "LMutex.h"
-#include "SenderFinishHandler.h"
 
 EventsQueue::EventsQueue() {
     handlers[Events::Release] = new ReleaseHandler();
@@ -20,7 +19,6 @@ EventsQueue::EventsQueue() {
     handlers[Events::UserLock] = new UserLockHandler();
     handlers[Events::Terminate] = new TerminateHandler();
     handlers[Events::TerminateReply] = new TerminateReplyHandler();
-    handlers[Events::FinishSender] = new SenderFinishHandler();
 }
 
 EventsQueue::~EventsQueue() {

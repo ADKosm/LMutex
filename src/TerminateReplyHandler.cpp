@@ -15,8 +15,6 @@ TerminateReplyHandler::~TerminateReplyHandler() {
 }
 
 void TerminateReplyHandler::handle(Message message, LMutex *mutex) {
-    std::cout << "Receive TermReply from " << message.id << std::endl;
-
     mutex->terminatedReplies.insert(message);
     mutex->time = std::max(mutex->time, message.time) + 1;
 }
