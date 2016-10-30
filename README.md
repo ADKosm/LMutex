@@ -1,2 +1,2 @@
 # LMutex
-Lamport mutex on C++
+Lamport initMutex on C++

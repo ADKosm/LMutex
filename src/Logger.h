@@ -17,10 +17,11 @@ public:
         return self;
     }
 
-    void log(Message message);
+    virtual void log(Message message);
 
-    ~Logger();
-private:
+    virtual ~Logger();
+
+protected:
     Logger();
 
     static Logger * self;

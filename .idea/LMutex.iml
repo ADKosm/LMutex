@@ -48,7 +48,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/ReplyHandler.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/TerminateHandler.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Node.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tests/TestConfiguration.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tests/TestNetManager.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tests/runTests.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tests/TestLogger.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tests/TestLogger.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tests/TestNetManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tests/TestConfiguration.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />

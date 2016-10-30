@@ -22,17 +22,19 @@ public:
         return self;
     }
 
-    void init();
-    void run();
+    virtual void init();
+    virtual void run();
 
-    EventsQueue * NetEvents();
-    EventsQueue * UserEvents();
+    virtual EventsQueue * NetEvents();
 
-    void sendTo(std::uint32_t id, Message message, LMutex *mutex);
-    void sendToAll(Message message, LMutex *mutex);
+    virtual EventsQueue * UserEvents();
 
-    ~NetManager();
-private:
+    virtual void sendTo(std::uint32_t id, Message message, LMutex *mutex);
+    virtual void sendToAll(Message message, LMutex *mutex);
+
+    virtual ~NetManager();
+
+protected:
     NetManager();
 
     static NetManager * self;

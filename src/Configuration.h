@@ -18,19 +18,19 @@ public:
         return self;
     }
 
-    void init(int argv, char ** argc);
+    virtual void init(int argv, char ** argc);
 
-    std::uint32_t Id();
-    std::map<uint32_t, Node> & Nodes();
-    std::string Type();
-    std::string Path();
-    std::string LogDir();
+    virtual std::uint32_t Id();
+    virtual std::map<uint32_t, Node> & Nodes();
+    virtual std::string Type();
+    virtual std::string Path();
+    virtual std::string LogDir();
 
-    Worker * getWorker();
+    virtual Worker * getWorker();
 
-    ~Configuration();
+    virtual ~Configuration();
 
-private:
+protected:
     Configuration();
 
     static Configuration * self;
