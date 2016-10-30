@@ -11,12 +11,18 @@
 #include "TerminateHandler.h"
 #include "TerminateReplyHandler.h"
 #include "LMutex.h"
+#include "UserUnlockHandler.h"
+#include "UserKillHandler.h"
 
 EventsQueue::EventsQueue() {
     handlers[Events::Release] = new ReleaseHandler();
     handlers[Events::Reply] = new ReplyHandler();
     handlers[Events::Request] = new RequestHandler();
+
     handlers[Events::UserLock] = new UserLockHandler();
+    handlers[Events::UserUnlock] = new UserUnlockHandler();
+    handlers[Events::UserKill] = new UserKillHandler();
+
     handlers[Events::Terminate] = new TerminateHandler();
     handlers[Events::TerminateReply] = new TerminateReplyHandler();
 }

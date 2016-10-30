@@ -6,6 +6,8 @@
 #define LMUTEX_USERWORKER_H
 
 #include "Worker.h"
+#include "NetManager.h"
+#include "Configuration.h"
 
 class UserWorker : public Worker {
 
@@ -15,6 +17,10 @@ public:
     virtual ~UserWorker() override;
 
     virtual void run() override;
+
+private:
+    Configuration * configuration;
+    NetManager * manager;
 };
 
 

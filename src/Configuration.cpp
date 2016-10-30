@@ -9,6 +9,9 @@
 // [current id] [type of work] [path to file] [log directory] [number of nodes] { [id] [address] [port] [id] [address] [port] ... }
 void Configuration::init(int argv, char **argc) {
 
+    userLock = false;
+    userUnlock = false;
+
     int currentId = std::stoi(std::string(argc[1]));
     std::string currentType = std::string(argc[2]);
     std::string pathToFile = std::string(argc[3]);
@@ -57,6 +60,23 @@ Configuration::Configuration() {
 Configuration::~Configuration() {
 }
 
+bool Configuration::isUserLock() {
+    return userLock;
+}
+
+void Configuration::setUserLock(bool value) {
+    userLock = value;
+    userUnlock = !value;
+}
+
+bool Configuration::isUserUnlock() {
+    return userUnlock;
+}
+
+void Configuration::setUserUnlock(bool value) {
+    userUnlock = value;
+    userLock = !value;
+}
 
 Worker *Configuration::getWorker() {
     if(type == "user") {

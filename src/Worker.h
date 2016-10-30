@@ -5,6 +5,7 @@
 #ifndef LMUTEX_WORKER_H
 #define LMUTEX_WORKER_H
 
+class LMutex;
 
 class Worker {
 public:
@@ -12,6 +13,8 @@ public:
     virtual ~Worker() {}
 
     virtual void run() = 0;
+
+    void writeToFile(LMutex &mutex);
 };
 
 

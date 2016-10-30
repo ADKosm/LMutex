@@ -30,6 +30,12 @@ public:
 
     virtual ~Configuration();
 
+    bool isUserLock();
+    void setUserLock(bool value);
+
+    bool isUserUnlock();
+    void setUserUnlock(bool value);
+
 protected:
     Configuration();
 
@@ -40,6 +46,9 @@ protected:
     std::string type;
     std::string path;
     std::string logDir;
+
+    bool userLock;
+    bool userUnlock;
 };
 
 //Configuration * Configuration::self = nullptr;

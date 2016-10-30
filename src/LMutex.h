@@ -24,6 +24,10 @@ class ReleaseHandler;
 class TerminateHandler;
 class TerminateReplyHandler;
 
+class UserLockHandler;
+class UserUnlockHandler;
+class UserKillHandler;
+
 class qComparator {
 public:
     qComparator() {}
@@ -44,8 +48,13 @@ class LMutex {
     friend class TerminateHandler;
     friend class TerminateReplyHandler;
 
+    friend class UserLockHandler;
+    friend class UserUnlockHandler;
+    friend class UserKillHandler;
+
     friend class StressWorker;
     friend class UserWorker;
+    friend class Worker;
 public:
     LMutex();
     ~LMutex();

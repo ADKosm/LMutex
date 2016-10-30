@@ -16,8 +16,6 @@ public:
 
     virtual void run() override;
 
-    void writeToFile(LMutex &mutex);
-
 private:
     int number;
 };
