@@ -4,7 +4,12 @@ import sys, os, shutil
 # [type] [number]
 type = sys.argv[1]
 number = int(sys.argv[2])
-ports = 8
+
+# change port in different modes in order to avoid situation, when OS doesn't close ports yet
+if type == "user":
+    ports = 8
+else:
+    ports = 9
 
 open('mutex.txt', 'tw+').close()
 
