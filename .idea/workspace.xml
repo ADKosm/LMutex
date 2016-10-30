@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" assignedExecutableTargets="true" buildAllGenerated="true">
     <generated>
-      <config projectName="LMutex" targetName="LMutex" />
       <config projectName="LMutex" targetName="runTests" />
+      <config projectName="LMutex" targetName="LMutex" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true" GENERATION_PASS_SYSTEM_ENVIRONMENT="true">
@@ -20,18 +20,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/log/1.log" afterPath="$PROJECT_DIR$/bin/log/1.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/log/2.log" afterPath="$PROJECT_DIR$/bin/log/2.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mutex.txt" afterPath="$PROJECT_DIR$/bin/mutex.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Events.cpp" afterPath="$PROJECT_DIR$/src/Events.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Events.h" afterPath="$PROJECT_DIR$/src/Events.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EventsQueue.cpp" afterPath="$PROJECT_DIR$/src/EventsQueue.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LMutex.cpp" afterPath="$PROJECT_DIR$/src/LMutex.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LMutex.h" afterPath="$PROJECT_DIR$/src/LMutex.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Listener.cpp" afterPath="$PROJECT_DIR$/src/Listener.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NetManager.cpp" afterPath="$PROJECT_DIR$/src/NetManager.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NetManager.h" afterPath="$PROJECT_DIR$/src/NetManager.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReleaseHandler.cpp" afterPath="$PROJECT_DIR$/src/ReleaseHandler.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReleaseHandler.h" afterPath="$PROJECT_DIR$/src/ReleaseHandler.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReplyHandler.cpp" afterPath="$PROJECT_DIR$/src/ReplyHandler.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RequestHandler.cpp" afterPath="$PROJECT_DIR$/src/RequestHandler.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Sender.cpp" afterPath="$PROJECT_DIR$/src/Sender.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TerminateHandler.cpp" afterPath="$PROJECT_DIR$/src/TerminateHandler.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TerminateReplyHandler.cpp" afterPath="$PROJECT_DIR$/src/TerminateReplyHandler.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/runTests.cpp" afterPath="$PROJECT_DIR$/tests/runTests.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StressWorker.cpp" afterPath="$PROJECT_DIR$/src/StressWorker.cpp" />
     </list>
     <ignored path="LMutex.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,7 +48,112 @@
     <favorites_list name="LMutex" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ReleaseHandler.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ReleaseHandler.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+              <folding>
+                <element signature="e#104#124#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReleaseHandler.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ReleaseHandler.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Events.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Events.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RequestHandler.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RequestHandler.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="19" column="92" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="92" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReplyHandler.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ReplyHandler.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="20" column="117" selection-start-line="20" selection-start-column="90" selection-end-line="20" selection-end-column="117" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Events.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Events.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LMutex.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LMutex.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LMutex.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LMutex.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+              <folding>
+                <element signature="e#88#106#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReplyComparator.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ReplyComparator.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sender.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Sender.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="50" column="70" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -66,8 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Configuration.cpp" />
-        <option value="$PROJECT_DIR$/LMutex.h" />
         <option value="$PROJECT_DIR$/LMutex.cpp" />
         <option value="$PROJECT_DIR$/Handler.h" />
         <option value="$PROJECT_DIR$/Handler.cpp" />
@@ -94,29 +194,31 @@
         <option value="$PROJECT_DIR$/src/Configuration.h" />
         <option value="$PROJECT_DIR$/src/Logger.h" />
         <option value="$PROJECT_DIR$/src/Logger.cpp" />
-        <option value="$PROJECT_DIR$/src/ReplyHandler.cpp" />
-        <option value="$PROJECT_DIR$/src/ReleaseHandler.cpp" />
-        <option value="$PROJECT_DIR$/src/RequestHandler.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/Handler.cpp" />
         <option value="$PROJECT_DIR$/src/TerminateHandler.h" />
         <option value="$PROJECT_DIR$/src/TerminateReplyHandler.h" />
-        <option value="$PROJECT_DIR$/src/StressWorker.cpp" />
-        <option value="$PROJECT_DIR$/bin/launcher.py" />
         <option value="$PROJECT_DIR$/src/Listener.cpp" />
         <option value="$PROJECT_DIR$/src/TerminateReplyHandler.cpp" />
         <option value="$PROJECT_DIR$/src/TerminateHandler.cpp" />
         <option value="$PROJECT_DIR$/tests/runTests.cpp" />
         <option value="$PROJECT_DIR$/src/NetManager.h" />
-        <option value="$PROJECT_DIR$/src/NetManager.cpp" />
         <option value="$PROJECT_DIR$/src/Events.h" />
         <option value="$PROJECT_DIR$/src/Events.cpp" />
-        <option value="$PROJECT_DIR$/src/Sender.cpp" />
         <option value="$PROJECT_DIR$/src/SenderFinishHandler.h" />
-        <option value="$PROJECT_DIR$/src/LMutex.h" />
         <option value="$PROJECT_DIR$/src/SenderFinishHandler.cpp" />
-        <option value="$PROJECT_DIR$/src/LMutex.cpp" />
         <option value="$PROJECT_DIR$/src/EventsQueue.cpp" />
+        <option value="$PROJECT_DIR$/bin/launcher.py" />
+        <option value="$PROJECT_DIR$/src/StressWorker.cpp" />
+        <option value="$PROJECT_DIR$/src/LMutex.cpp" />
+        <option value="$PROJECT_DIR$/src/NetManager.cpp" />
+        <option value="$PROJECT_DIR$/src/Sender.cpp" />
+        <option value="$PROJECT_DIR$/src/ReplyHandler.cpp" />
+        <option value="$PROJECT_DIR$/src/RequestHandler.cpp" />
+        <option value="$PROJECT_DIR$/src/ReplyComparator.h" />
+        <option value="$PROJECT_DIR$/src/LMutex.h" />
+        <option value="$PROJECT_DIR$/src/ReleaseHandler.h" />
+        <option value="$PROJECT_DIR$/src/ReleaseHandler.cpp" />
       </list>
     </option>
   </component>
@@ -204,13 +306,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LMutex" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LMutex" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="lis&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Listener.cpp&#10;LM&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/LMutex.cpp&#10;lm&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/LMutex.h&#10;Send&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Sender.cpp&#10;Event&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/EventsQueue.cpp&#10;Li&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Listener.cpp&#10;send&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Sender.cpp&#10;Lis&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Listener.cpp&#10;Se&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Sender.cpp&#10;li&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Listener.cpp&#10;work&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/StressWorker.cpp&#10;Term&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/TerminateHandler.cpp&#10;LMu&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/LMutex.cpp&#10;mu&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/LMutex.h&#10;Lm&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/LMutex.cpp&#10;Req&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/RequestHandler.cpp&#10;lmu&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/LMutex.cpp&#10;handl&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/ReplyHandler.cpp&#10;lo&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Logger.cpp&#10;Work&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/StressWorker.cpp&#10;netmana&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/NetManager.cpp&#10;sende&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Sender.cpp&#10;main&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/main.cpp&#10;maim&#9;null&#9;null&#10;sender&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/Sender.cpp&#10;logg&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/Logger.h&#10;requ&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/RequestHandler.cpp" />
+    <property name="SearchEverywhereHistoryKey" value="Rele&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/ReleaseHandler.h&#10;LM&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/LMutex.cpp&#10;repl&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/ReplyHandler.cpp&#10;hand&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/RequestHandler.cpp&#10;handl&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/ReleaseHandler.cpp&#10;send&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Sender.cpp&#10;Net&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/NetManager.h&#10;li&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Listener.cpp&#10;Netm&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/NetManager.cpp&#10;sen&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Sender.cpp&#10;logger&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Logger.cpp&#10;logg&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Logger.h&#10;rele&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/ReleaseHandler.cpp&#10;work&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/StressWorker.cpp&#10;lis&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Listener.cpp&#10;lm&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/LMutex.h&#10;Send&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Sender.cpp&#10;Event&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/EventsQueue.cpp&#10;Li&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Listener.cpp&#10;Lis&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Listener.cpp&#10;Se&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Sender.cpp&#10;Term&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/TerminateHandler.cpp&#10;LMu&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/LMutex.cpp&#10;mu&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/LMutex.h&#10;Lm&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/LMutex.cpp&#10;Req&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/RequestHandler.cpp&#10;lmu&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/LMutex.cpp&#10;lo&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Logger.cpp&#10;Work&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/StressWorker.cpp&#10;netmana&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/NetManager.cpp&#10;sende&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/src/Sender.cpp&#10;main&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/main.cpp&#10;maim&#9;null&#9;null&#10;sender&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/Sender.cpp&#10;requ&#9;FILE&#9;file:///home/alex/vms/DistributedSystem/LMutex/RequestHandler.cpp" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -434,13 +550,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="24" width="1920" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17870322" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24986821" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -452,7 +569,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -477,7 +593,7 @@
         </line-breakpoint>
         <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/LMutex.cpp</url>
-          <line>42</line>
+          <line>44</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
@@ -494,13 +610,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/UserLockHandler.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UserLockHandler.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -519,7 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="747" column="0" selection-start-line="747" selection-start-column="0" selection-end-line="747" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -527,15 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="414" column="0" selection-start-line="414" selection-start-column="0" selection-end-line="414" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sender.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -543,14 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logger.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -567,7 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -583,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -595,21 +684,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReleaseHandler.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#39#59#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MessageBuilder.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -617,17 +695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding>
-            <element signature="e#104#124#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logger.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -635,23 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReleaseHandler.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReplyHandler.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -663,19 +713,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RequestHandler.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/mutex.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -683,7 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -703,35 +743,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StressWorker.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/launcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/1.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/1.log" />
     <entry file="file://$PROJECT_DIR$/bin/log/1.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5911">
           <caret line="416" column="0" selection-start-line="416" selection-start-column="0" selection-end-line="416" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -739,7 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3824">
           <caret line="819" column="37" selection-start-line="819" selection-start-column="37" selection-end-line="819" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -763,9 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-          <folding>
-            <element signature="e#39#58#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -791,7 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
           <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -811,70 +822,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Events.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding>
-            <marker date="1477768913335" expanded="true" signature="121:415" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Events.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NetManager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NetManager.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LMutex.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding>
-            <element signature="e#88#106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SenderFinishHandler.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sender.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Listener.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="68" column="2" selection-start-line="68" selection-start-column="2" selection-end-line="68" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -902,18 +853,155 @@
         <state relative-caret-position="75">
           <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
           <folding>
-            <element signature="e#39#58#0" expanded="true" />
+            <element signature="e#39#58#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/launcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logger.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logger.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StressWorker.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NetManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sender.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Listener.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="68" column="2" selection-start-line="68" selection-start-column="2" selection-end-line="68" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NetManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sender.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="50" column="70" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ReplyHandler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="117" selection-start-line="20" selection-start-column="90" selection-end-line="20" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RequestHandler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" column="92" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Events.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Events.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LMutex.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="91" column="29" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
+        <state relative-caret-position="75">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ReplyComparator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ReleaseHandler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
           <folding>
-            <element signature="e#38#57#0" expanded="true" />
+            <element signature="e#104#124#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LMutex.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+          <folding>
+            <element signature="e#88#106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ReleaseHandler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

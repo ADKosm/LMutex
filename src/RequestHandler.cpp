@@ -17,7 +17,7 @@ RequestHandler::~RequestHandler() {
 
 void RequestHandler::handle(Message message, LMutex *mutex) {
 
-    std::cout << "Receive request message" << std::endl;
+    std::cout << "["<< configuration->Id() <<"]Receive request message from " << message.id << "("<< message.time <<")" << std::endl;
     mutex->queue.push(message);
     mutex->time = std::max(mutex->time, message.time) + 1;
 //    message.time = mutex->time;

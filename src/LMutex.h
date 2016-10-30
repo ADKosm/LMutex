@@ -13,6 +13,7 @@
 #include "NetManager.h"
 #include "Configuration.h"
 #include "Message.h"
+#include "ReplyComparator.h"
 
 class StressWorker;
 class UserWorker;
@@ -34,16 +35,6 @@ public:
             return a.id > b.id;
         }
         return a.time > b.time;
-    }
-};
-
-class replyComparator {
-public:
-    replyComparator() {}
-    ~replyComparator() {}
-
-    bool operator() (const Message& a, const Message& b) const {
-        return a.id < b.id;
     }
 };
 

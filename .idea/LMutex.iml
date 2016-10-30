@@ -40,6 +40,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/TerminateReplyHandler.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/NetManager.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/LMutex.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ReplyComparator.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Handler.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/SafeQueue.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/LMutex.h" isTestSource="false" />

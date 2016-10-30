@@ -12,9 +12,9 @@
 #include <thread>
 
 void NetManager::run() {
-    std::thread([this](){
-        this->sender->run();
-    }).detach();
+//    std::thread([this](){
+//        this->sender->run();
+//    }).detach();
 
     std::thread([this](){
         this->listener->run();
@@ -46,13 +46,15 @@ EventsQueue *NetManager::UserEvents() {
 
 void NetManager::sendTo(std::uint32_t id, Message message, LMutex *mutex) {
     mutex->tick();
-    messagesToSend.push(std::make_pair(id, message));
+    //messagesToSend.push(std::make_pair(id, message));
+    Logger::Inst()->log(message);
+    sender->sendTo(id, message);
 }
 
 void NetManager::sendToAll(Message message, LMutex *mutex) {
     auto& nodes = Configuration::Inst()->Nodes();
     for(auto e : nodes) {
-        if(e.first != Configuration::Inst()->Id())sendTo(e.first, message, mutex);
+        if(e.first != Configuration::Inst()->Id()) sendTo(e.first, message, mutex);
     }
 }
 

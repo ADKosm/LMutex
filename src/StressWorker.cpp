@@ -56,7 +56,10 @@ void StressWorker::writeToFile(LMutex &mutex) {
 
     int fd = open(Configuration::Inst()->Path().c_str(), O_WRONLY | O_APPEND);
     int stat = flock(fd, LOCK_EX | LOCK_NB);
-    if(stat == -1) throw std::string("Flock error");
+    if(stat == -1) {
+        std::cout << "Flock error" << std::endl;
+        throw std::string("Flock error");
+    }
     write(fd, result.c_str(), result.size());
     flock(fd, LOCK_UN);
     close(fd);

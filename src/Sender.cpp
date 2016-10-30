@@ -48,7 +48,7 @@ void Sender::run() {
 
 void Sender::sendTo(std::uint32_t id, Message message) {
 
-    std::cout << "Send message to " << id << ": " << message.time << ' ' << int(message.type) << std::endl;
+    std::cout << "Send message from " << configuration->Id() <<" to " << id << ": " << message.time << ' ' << int(message.type) << std::endl;
     auto& nodes = configuration->Nodes();
 
     int sendfd, connfd;

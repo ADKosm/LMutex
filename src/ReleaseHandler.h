@@ -6,6 +6,8 @@
 #define LMUTEX_RELEASEHANDLER_H
 
 #include "Handler.h"
+#include "ReplyComparator.h"
+#include <set>
 
 class ReleaseHandler : public Handler {
 
@@ -15,6 +17,12 @@ public:
     virtual ~ReleaseHandler() override;
 
     virtual void handle(Message message, LMutex *mutex) override;
+
+private:
+
+    void releasePrevious(Message message, LMutex *mutex);
+
+    std::set<Message, replyComparator> released;
 };
 
 

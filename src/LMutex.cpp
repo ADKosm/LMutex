@@ -15,6 +15,8 @@
 #include "ReplyHandler.h"
 #include "ReleaseHandler.h"
 
+#include <thread>
+
 LMutex::LMutex() {
     manager = NetManager::Inst();
     configuration = Configuration::Inst();
@@ -56,6 +58,8 @@ void LMutex::unlock() {
             .build();
 
     manager->sendToAll(requestToRelease, this);
+
+//    std::this_thread::sleep_for(std::chrono::seconds(3));
 }
 
 
@@ -99,13 +103,13 @@ void LMutex::finish() {
         manager->NetEvents()->handle(this);
     }
 
-    manager->finishNetwork();
-
-
-
-    while(!isSenderFinish) {
-        manager->NetEvents()->handle(this);
-    }
+//    manager->finishNetwork();
+//
+//
+//
+//    while(!isSenderFinish) {
+//        manager->NetEvents()->handle(this);
+//    }
 
     std::cout << "Nodes size: " << terminated.size() << std::endl;
     std::cout << "End my("<< configuration->Id() <<") work" << std::endl;

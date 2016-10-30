@@ -18,7 +18,7 @@ ReplyHandler::~ReplyHandler() {
 }
 
 void ReplyHandler::handle(Message message, LMutex *mutex) {
-    std::cout << "Receive reply message" << std::endl;
+    std::cout << "["<< configuration->Id() <<"]Receive reply message from " << message.id << "("<< message.time <<")" << std::endl;
     mutex->replies.insert(message);
     mutex->time = std::max(mutex->time, message.time) + 1;
 }
